@@ -4,7 +4,7 @@
 int main()
 {
 // create a stack of floats
-std::stack <std::string> FloatStack;
+std::stack <float> FloatStack;
 // push some values on the stack
 FloatStack.push(3.0);
 FloatStack.push(2.0);
