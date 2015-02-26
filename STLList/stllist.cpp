@@ -4,35 +4,35 @@
 #include <cstdlib>
 #include <boost/foreach.hpp>
 
-/*
-void PrintList(
-								const std::list <float> &_l
-							)
-{
-	std::list <float>::const_iterator it;
-	std::cout <<"******"<<std::endl;
-	for(it = _l.begin(); it !=_l.end(); ++it)
-	{
-		std::cout <<*it<<std::endl;
-	}
-	std::cout <<"******"<<std::endl;
 
-}
-*/
-/*
-void PrintList(
-								const std::list <float> &_l
-							)
-{
-	std::cout <<"******"<<std::endl;
-	BOOST_FOREACH(float f,_l)
-	{
-		std::cout <<f<<std::endl;
-	}
-	std::cout <<"******"<<std::endl;
-}
+// void PrintList(
+// 								const std::list <float> &_l
+// 							)
+// {
+// 	std::list <float>::const_iterator it;
+// 	std::cout <<"******"<<std::endl;
+// 	for(it = _l.begin(); it !=_l.end(); ++it)
+// 	{
+// 		std::cout <<*it<<std::endl;
+// 	}
+// 	std::cout <<"******"<<std::endl;
 
-/*
+// }
+
+
+// void PrintList(
+// 								const std::list <float> &_l
+// 							)
+// {
+// 	std::cout <<"******"<<std::endl;
+// 	BOOST_FOREACH(float f,_l)
+// 	{
+// 		std::cout <<f<<std::endl;
+// 	}
+// 	std::cout <<"******"<<std::endl;
+// }
+
+
 void PrintList(
 								const std::list <float> &_l
 							)
@@ -46,19 +46,19 @@ void PrintList(
 	}
 	std::cout <<"******"<<std::endl;
 }
-*/
-
-void PrintList(
-								const std::list <float> &_l
-							)
-{
-	for(auto f : _l)
-	{
-		std::cout<<f<<"\n";
-	}
 
 
-}
+// void PrintList(
+// 								const std::list <float> &_l
+// 							)
+// {
+// 	for(auto f : _l)
+// 	{
+// 		std::cout<<f<<"\n";
+// 	}
+
+
+// }
 
 
 int main(void)
@@ -83,7 +83,7 @@ int main(void)
 	std::cout <<"Front method "<<ToSort.front()<<std::endl;
 	std::cout <<"Back method "<<ToSort.back()<<std::endl;
 	std::cout << "Clear List"<<std::endl;
-
+	ToSort.clear();
 	std::cout <<"Add some more values "<<std::endl;
 	ToSort.push_front(12.0);
 	ToSort.push_front(3.0);

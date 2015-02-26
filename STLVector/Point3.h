@@ -1,5 +1,5 @@
-#ifndef __POINT3_H__
-#define __POONT3_H__
+#ifndef POINT3_H__
+#define POINT3_H__
 #include <iostream>
 #include <cassert>
 
