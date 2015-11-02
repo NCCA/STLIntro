@@ -33,32 +33,32 @@
 // }
 
 
-void PrintList(
-								const std::list <float> &_l
-							)
-{
-	std::list <float>::const_iterator begin=_l.begin();
-	std::list <float>::const_iterator end=_l.end();
-	std::cout <<"******"<<std::endl;
-	while(begin != end)
-	{
-		std::cout <<*begin++<<std::endl;
-	}
-	std::cout <<"******"<<std::endl;
-}
-
-
 // void PrintList(
 // 								const std::list <float> &_l
 // 							)
 // {
-// 	for(auto f : _l)
+// 	std::list <float>::const_iterator begin=_l.begin();
+// 	std::list <float>::const_iterator end=_l.end();
+// 	std::cout <<"******"<<std::endl;
+// 	while(begin != end)
 // 	{
-// 		std::cout<<f<<"\n";
+// 		std::cout <<*begin++<<std::endl;
 // 	}
-
-
+// 	std::cout <<"******"<<std::endl;
 // }
+
+
+void PrintList(
+								const std::list <float> &_l
+							)
+{
+	for(auto f : _l)
+	{
+		std::cout<<f<<"\n";
+	}
+
+
+}
 
 
 int main(void)

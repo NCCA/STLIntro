@@ -17,8 +17,8 @@ void printFunc(int i)
 int main()
 {
 
-	std::vector <int> randomNumbers;
-	randomNumbers.resize(1000);
+	std::vector <int> randomNumbers(10);
+	//randomNumbers.resize(1000);
 	std::generate(randomNumbers.begin(),randomNumbers.end(),randNum);
 	std::for_each(randomNumbers.begin(),randomNumbers.end(),printFunc);
 	std::cout<<"*********\n";

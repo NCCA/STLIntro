@@ -4,11 +4,11 @@
 class Mem
 {
   public :
-    Mem(int _size,char _n) :m_size(_size),m_mem(new int[_size]),m_c(_n)
+    Mem(int _size,char _n) : m_mem(new int[_size]),m_c(_n)
     {
       std::cout<<"ctor "<<m_c<<'\n';
     }
-    Mem(): m_size(0),m_mem(0),m_c('z')
+    Mem(): m_mem(nullptr),m_c('d')
     {
       std::cout<<"default ctor "<<m_c<<'\n';
     }
@@ -17,11 +17,10 @@ class Mem
     ~Mem()
     {
       std::cout<<"dtor "<<m_c<<'\n';
-      if(m_mem !=NULL)
+      if(m_mem !=nullptr)
         delete [] m_mem;
     }
   private :
-    int m_size;
     int *m_mem;
     char m_c;
 };

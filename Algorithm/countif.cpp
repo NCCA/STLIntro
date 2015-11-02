@@ -9,7 +9,7 @@ int main ()
   int mycount;
 
   std::vector<int> myvector;
-  for (int i=0; i<100123123; ++i)
+  for (int i=0; i<10123123; ++i)
   	myvector.push_back(i);
 
   mycount = (int) std::count_if (myvector.begin(), myvector.end(), isOdd);

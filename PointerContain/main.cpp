@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include <boost/shared_ptr.hpp>
+#include <memory>
 #include "Mem.h"
 
 int main()
@@ -13,7 +13,6 @@ int main()
 
     std::cout<<"resize size "<<v.size()<<"\n";
   }
-
   {
     std::cout<<"**********************************\n";
     std::cout<<"scoped std::vector auto\n";
@@ -36,7 +35,8 @@ int main()
     std::vector<Mem *>v;
     v.push_back(new Mem(10,'a'));
     v.push_back(new Mem(10,'b'));
-    v.clear();
+    //v.clear();
+    v.erase(v.begin(),v.end());
   }
   std::cout<<"end dynamic scope\n";
   std::cout<<"**********************************\n";
@@ -59,9 +59,9 @@ int main()
     std::cout<<"**********************************\n";
     std::cout<<"shared pointer\n";
 
-    std::vector<boost::shared_ptr<Mem > >v;
-    v.push_back( boost::shared_ptr<Mem >(new Mem(10,'a')) );
-    v.push_back( boost::shared_ptr<Mem >(new Mem(10,'b')) );
+    std::vector<std::unique_ptr<Mem > >v;
+    v.push_back( std::unique_ptr<Mem >(new Mem(10,'a')) );
+    v.push_back( std::unique_ptr<Mem >(new Mem(10,'b')) );
     v.clear();
   }
   std::cout<<"end smart pointer scope\n";

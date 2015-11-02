@@ -10,7 +10,7 @@ int main()
 	std::cout<<map.size()<<"\n";
 	for(int i=1; i<20; ++i)
 	{
-		std::cout<<map[i]<<" "<<map.size()<<"\n";
+		std::cout<<map[i]<<" >"<<map.size()<<"\n";
 	}
 	map.clear();
 	map[0]="reset";
