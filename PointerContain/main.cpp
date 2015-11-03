@@ -20,10 +20,12 @@ int main()
     Mem a(10,'a');
     Mem b(10,'b');
     std::cout<<"create v\n";
-    std::vector<Mem>v;
+    std::vector<Mem>v(2);
     std::cout<<"push back\n";
-    v.push_back(a);
-    v.push_back(b);
+    //v.push_back(a);
+    //v.push_back(b);
+    v[0]=a;
+    v[1]=b;
   }
   std::cout<<"end auto scope\n";
   std::cout<<"**********************************\n";
