@@ -18,6 +18,7 @@ class Mem
     {
       m_size=_m.m_size;
       m_mem = new int[m_size];
+      m_c=_m.m_c;
       memcpy(m_mem,_m.m_mem,sizeof(int)*m_size);
       std::cout<<"copy ctor "<<m_c<<'\n';
 
