@@ -1,7 +1,8 @@
 #include <iostream>
-#include <map>
+#include <unordered_map>
 #include <string>
 #include <cstdlib>
+#include <functional>
 
 
 void FuncA(int _value)
@@ -21,11 +22,11 @@ void FuncC(int _value)
 
 int main()
 {
-	std::map <std::string,void (*)(int)> MyMap;
+	std::unordered_map <std::string,std::function<void (int)>> MyMap;
 
-	MyMap["run"]=&FuncA;
-	MyMap["walk"]=&FuncB;
-	MyMap["fire"]=&FuncC;
+	MyMap["run"]=FuncA;
+	MyMap["walk"]=FuncB;
+	MyMap["fire"]=FuncC;
 
 	MyMap["run"](56);
 	MyMap["fire"](10);
