@@ -3,7 +3,7 @@
 #include <string>
 #include <cstdlib>
 
-int main(void)
+int main()
 {
 	std::map <std::string,int> MyMap;
 
@@ -11,14 +11,14 @@ int main(void)
 	MyMap["Office"]=123331452;
 	MyMap["Land Line"]=243464343;
 
-	std::cout <<MyMap["Jon"]<<std::endl;
-	std::cout <<MyMap["Land Line"]<<std::endl;
-	std::cout <<MyMap["Office"]<<std::endl;
+	std::cout <<MyMap["Jon"]<<'\n';
+	std::cout <<MyMap["Land Line"]<<'\n';
+	std::cout <<MyMap["Office"]<<'\n';
 	MyMap["Jon"]=442;
-	std::cout<<MyMap.size()<<std::endl;
-	std::cout<<MyMap["fred"]<<std::endl;
-	std::cout <<MyMap["Jon"]<<std::endl;
-	std::cout<<MyMap.size()<<std::endl;
+	std::cout<<MyMap.size()<<'\n';
+	std::cout<<MyMap["fred"]<<'\n';
+	std::cout <<MyMap["Jon"]<<'\n';
+	std::cout<<MyMap.size()<<'\n';
 
 	return EXIT_SUCCESS;
 }

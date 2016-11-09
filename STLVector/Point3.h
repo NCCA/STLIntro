@@ -1,11 +1,10 @@
-#ifndef POINT3_H__
-#define POINT3_H__
+#ifndef POINT3_H_
+#define POINT3_H_
 #include <iostream>
 #include <cassert>
 
 class Point3
 {
-
 public :
 
 	friend std::ostream& operator<<(
@@ -18,17 +17,12 @@ public :
 
 	inline Point3(float _x=0.0, float _y=0.0, float _z=0.0): m_x(_x),m_y(_y),m_z(_z){;}
 
-	inline float& operator[](
-														const int& _i
-													)
+	inline float& operator[]( int _i)
 	{
 		assert(_i >=0 || _i<=3);
 		return (&m_x)[_i];
 	}
-	void Print()
-	{
-	 std::cout<<"X is "<<m_x<<"\n";
-	}
+	
 
 	private :
 		float m_x;

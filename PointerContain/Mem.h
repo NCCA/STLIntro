@@ -1,5 +1,6 @@
-#ifndef MEM_H__
-#define MEM_H__
+#ifndef MEM_H_
+#define MEM_H_
+
 #include <iostream>
 #include <cstring>
 class Mem
