@@ -2,13 +2,6 @@
 #include <list>
 #include <algorithm>
 
-void printFunc(int i)
-{
-	std::cout<<i<<"\n";
-}
-
-int Double(int i) { return i*2;}
-
 int main()
 {
 
@@ -22,11 +15,11 @@ int main()
 	std::list <int> secondList;
 	secondList.resize(myList.size());
 
-	std::for_each(myList.begin(),myList.end(),printFunc);
+	std::for_each(std::begin(myList),std::end(myList),[](int n){std::cout<<n<<'\n';});
 
-	std::transform(myList.begin(),myList.end(),secondList.begin(),Double);
+	std::transform(std::begin(myList),std::end(myList),std::begin(secondList),[](int &n){return n*2;});
 	std::cout<<"second\n";
-	std::for_each(secondList.begin(),secondList.end(),printFunc);
+	std::for_each(std::begin(secondList),std::end(secondList),[](int n){std::cout<<n<<'\n';});
 
 }
 
