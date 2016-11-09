@@ -7,17 +7,17 @@
 
 void FuncA(int _value)
 {
-	std::cout <<"Function A "<<_value<<std::endl;
+	std::cout <<"Function A "<<_value<<'\n';
 }
 
 void FuncB(int _value)
 {
-	std::cout <<"Function B "<<_value<<std::endl;
+	std::cout <<"Function B "<<_value<<'\n';
 }
 
 void FuncC(int _value)
 {
-	std::cout <<"Function C "<<_value<<std::endl;
+	std::cout <<"Function C "<<_value<<'\n';
 }
 
 int main()
