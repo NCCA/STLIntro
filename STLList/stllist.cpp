@@ -2,95 +2,48 @@
 #include <list>
 #include <algorithm>
 #include <cstdlib>
-#include <boost/foreach.hpp>
 
 
-// void PrintList(const std::list <float> &_l	)
-// {
-// //	std::list <float>::const_iterator it;
-	
-// 	std::cout <<"******"<<std::endl;
-// 	for(auto it = _l.begin(); it !=_l.end(); ++it)
-// 	{
-// 		std::cout <<*it<<std::endl;
-// 	}
-// 	std::cout <<"******"<<std::endl;
-
-// }
-
-
-// void PrintList(
-// 								const std::list <float> &_l
-// 							)
-// {
-// 	std::cout <<"******"<<std::endl;
-// 	BOOST_FOREACH(float f,_l)
-// 	{
-// 		std::cout <<f<<std::endl;
-// 	}
-// 	std::cout <<"******"<<std::endl;
-// }
-
-
-void PrintList(const std::list <float> &_l)
+int main()
 {
-	auto begin=std::rbegin(_l);//.begin();
-	auto end=std::rend(_l);//.end();
-	std::cout <<"******"<<std::endl;
-	while(begin != end)
-	{
-		std::cout <<*begin++<<std::endl;
-	}
-	std::cout <<"******"<<std::endl;
-}
+	std::list <float> toSort;
 
+	toSort.push_back(2.0f);
+	toSort.push_back(9.0f);
+	toSort.push_back(2.1f);
+	toSort.push_front(12.0f);
+	toSort.push_front(3.0f);
+	toSort.push_front(3.0f);
 
-// void PrintList(const std::list <float> &_l)
-// {
-// 	for(auto f : _l)
-// 	{
-// 		std::cout<<f<<"\n";
-// 	}
+	for(auto i : toSort)
+		std::cout<<i<<'\n';
 
-// }
-
-
-int main(void)
-{
-	std::list <float> ToSort;
-
-	ToSort.push_back(2.0);
-	ToSort.push_back(9.0);
-	ToSort.push_back(2.1);
-	ToSort.push_front(12.0);
-	ToSort.push_front(3.0);
-	ToSort.push_front(3.0);
-
-	PrintList(ToSort);
-	ToSort.sort();
+	toSort.sort();
+	std::for_each(std::begin(toSort),std::end(toSort),[](float i){std::cout<<i<<'\n';});
 	std::cout <<"Sorted"<<std::endl;
-	PrintList(ToSort);
+	std::for_each(std::begin(toSort),std::end(toSort),[](float i){std::cout<<i<<'\n';});
 	std::cout <<"reverse" <<std::endl;
-	ToSort.reverse();
-	PrintList(ToSort);
+	toSort.reverse();
+	std::for_each(std::begin(toSort),std::end(toSort),[](float i){std::cout<<i<<'\n';});
 
-	std::cout <<"Front method "<<ToSort.front()<<std::endl;
-	std::cout <<"Back method "<<ToSort.back()<<std::endl;
+	std::cout <<"Front method "<<toSort.front()<<std::endl;
+	std::cout <<"Back method "<<toSort.back()<<std::endl;
 	std::cout << "Clear List"<<std::endl;
-	ToSort.clear();
+	toSort.clear();
 	std::cout <<"Add some more values "<<std::endl;
-	ToSort.push_front(12.0);
-	ToSort.push_front(3.0);
-	ToSort.push_front(3.0);
-	PrintList(ToSort);
+	toSort.push_front(12.0);
+	toSort.push_front(3.0);
+	toSort.push_front(3.0);
+	std::for_each(std::begin(toSort),std::end(toSort),[](float i){std::cout<<i<<'\n';});
 
 	std::cout <<"Now remove unique values"<<std::endl;
-	ToSort.unique();
-	PrintList(ToSort);
+	toSort.unique();
+	std::for_each(std::begin(toSort),std::end(toSort),[](float i){std::cout<<i<<'\n';});
 
 
-	ToSort.clear();
-	PrintList(ToSort);
+	toSort.clear();
+	std::for_each(std::begin(toSort),std::end(toSort),[](float i){std::cout<<i<<'\n';});
+	
 	return EXIT_SUCCESS;
 }
 

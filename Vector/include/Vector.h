@@ -221,7 +221,7 @@ public :
 /// @param _v the vector value
 /// @returns a vector _k*v
 //----------------------------------------------------------------------------------------------------------------------
-inline Vector operator *(float _k, const Vector &_v)
+Vector operator *(float _k, const Vector &_v)
 {
 return Vector(_k*_v.m_x, _k*_v.m_y, _k*_v.m_z,_v.m_w);
 }
