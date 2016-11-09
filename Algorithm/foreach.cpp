@@ -5,7 +5,7 @@
 
 void printFunc(const std::string &i)
 {
-	std::cout<<i<<"\n";
+	std::cout<<i<<'\n';
 }
 
 int main()
@@ -21,7 +21,6 @@ int main()
 	std::for_each(myList.begin(),myList.end(),printFunc);
 
 	std::cout<<"2 appears "<<std::count(myList.begin(),myList.end(),"2")<<"times\n";
-
 
 }
 

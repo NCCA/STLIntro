@@ -3,27 +3,22 @@
 #include <algorithm>
 #include <cstdlib>
 
-int randNum()
-{
-	return rand()%100;
-}
-
-void printFunc(int i)
-{
-	std::cout<<i<<"\n";
-}
-
-
 int main()
 {
 
 	std::vector <int> randomNumbers(10);
 	srand(time(NULL));
-	//randomNumbers.resize(1000);
-	std::generate(randomNumbers.begin(),randomNumbers.end(),randNum);
-	std::for_each(randomNumbers.begin(),randomNumbers.end(),printFunc);
-	std::cout<<"*********\n";
-	std::for_each(randomNumbers.rbegin(),randomNumbers.rend(),printFunc);
+	std::generate(std::begin(randomNumbers),std::end(randomNumbers),std::rand);
+
+	for (auto n : randomNumbers)
+		std::cout<<n<<' ';
+	std::cout<<'\n';
+
+	int n = {0};
+  std::generate(std::begin(randomNumbers),std::end(randomNumbers), [&n]{ return n++; });
+	for (auto n : randomNumbers)
+			std::cout<<n<<' ';
+		std::cout<<'\n';
 
 }
 
