@@ -4,23 +4,17 @@
 #include <cstdlib>
 
 
-void FuncA(
-						int _value
-					)
+void FuncA(int _value)
 {
 	std::cout <<"Function A "<<_value<<std::endl;
 }
 
-void FuncB(
-						int _value
-					)
+void FuncB(int _value)
 {
 	std::cout <<"Function B "<<_value<<std::endl;
 }
 
-void FuncC(
-					 int _value
-					)
+void FuncC(int _value)
 {
 	std::cout <<"Function C "<<_value<<std::endl;
 }

@@ -16,7 +16,7 @@ public :
 	return _output<<"["<<_s.m_x<<","<<_s.m_y<<","<<_s.m_z<<"]";
 	}
 
-	inline Point3(float _x, float _y, float _z): m_x(_x),m_y(_y),m_z(_z){;}
+	inline Point3(float _x=0.0, float _y=0.0, float _z=0.0): m_x(_x),m_y(_y),m_z(_z){;}
 
 	inline float& operator[](
 														const int& _i

@@ -18,6 +18,7 @@ int main()
 {
 
 	std::vector <int> randomNumbers(10);
+	srand(time(NULL));
 	//randomNumbers.resize(1000);
 	std::generate(randomNumbers.begin(),randomNumbers.end(),randNum);
 	std::for_each(randomNumbers.begin(),randomNumbers.end(),printFunc);
@@ -25,3 +26,11 @@ int main()
 	std::for_each(randomNumbers.rbegin(),randomNumbers.rend(),printFunc);
 
 }
+
+
+
+
+
+
+
+

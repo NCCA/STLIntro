@@ -17,6 +17,7 @@
 #include "Vector.h"
 #include <cmath>
 #include <cassert>
+#include <iostream>
 //----------------------------------------------------------------------------------------------------------------------
 /// @file Vector.cpp
 /// @brief implementation files for Vector class
@@ -43,7 +44,7 @@ void Vector::set(const Vector& _v )
 
 
 //----------------------------------------------------------------------------------------------------------------------
-float& Vector::operator[]( const int _i )
+float& Vector::operator[](  int _i )
 {
 	assert(_i >=0 || _i<=4);
 	return (&m_x)[_i];
@@ -64,7 +65,7 @@ void Vector::operator+=( const Vector& _v )
 	m_x+=_v.m_x;
 	m_y+=_v.m_y;
 	m_z+=_v.m_z;
-	m_w=0.0;
+  // m_w=0.0; note design decision on w to leave as is!
 }
 
 //----------------------------------------------------------------------------------------------------------------------
@@ -74,7 +75,7 @@ void Vector::operator/=(const float _v )
 	m_x/=_v;
 	m_y/=_v;
 	m_z/=_v;
-	m_w=0.0;
+  // m_w=0.0;
 }
 
 //----------------------------------------------------------------------------------------------------------------------
@@ -83,7 +84,7 @@ void Vector::operator-=(const Vector& _v  )
 	m_x-=_v.m_x;
 	m_y-=_v.m_y;
 	m_z-=_v.m_z;
-	m_w=0.0;
+  // m_w=0.0;
 }
 
 //----------------------------------------------------------------------------------------------------------------------
@@ -189,20 +190,20 @@ std::ostream& operator<<( std::ostream& _output,  const Vector& _v   )
 //----------------------------------------------------------------------------------------------------------------------
 std::istream& operator>>( std::istream& _input, Vector& _s  )
 {
-	return _input >> _s.m_x >> _s.m_y >> _s.m_z;//>>s.m_w;
+  return _input >> _s.m_x >> _s.m_y >> _s.m_z;//>>s.m_w;
 }
 
 //----------------------------------------------------------------------------------------------------------------------
 std::ostream& operator<<(  std::ostream& _output,  const Vector* _s    )
 {
-	return _output<<"["<<_s->m_x<<","<<_s->m_y<<","<<_s->m_z<<","<<_s->m_w<<"]";
+  return _output<<"["<<_s->m_x<<","<<_s->m_y<<","<<_s->m_z<<","<<_s->m_w<<"]";
 }
 /// \todo #warning don't forget the nasty don't load m_w hack here
 
 //----------------------------------------------------------------------------------------------------------------------
 std::istream& operator>>( std::istream& _input,   Vector *_s   )
 {
-	return _input >> _s->m_x >> _s->m_y >> _s->m_z;//>>s->m_w;
+  return _input >> _s->m_x >> _s->m_y >> _s->m_z;//>>s->m_w;
 }
 
 

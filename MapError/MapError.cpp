@@ -18,7 +18,7 @@ int main()
 	{
 
 		std::cout<<"size "<<map.size()<<"\n";
-	  std::map <int,std::string>::const_iterator it=map.find(i);
+	  auto it=map.find(i);
 	  if(it !=map.end())
 	  {
 	  	std::cout<<"found value "<<it->second<<"\n";
@@ -27,3 +27,9 @@ int main()
 	}
 	return EXIT_SUCCESS;
 }
+
+
+
+
+
+

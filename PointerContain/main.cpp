@@ -5,55 +5,55 @@
 
 int main()
 {
-  {
-    std::vector<Mem>v;
-    std::cout<<"empty size "<<v.size()<<"\n";
-    std::cout<<"doing resize\n";
-    v.resize(10);
+//  {
+//    std::vector<Mem>v;
+//    std::cout<<"empty size "<<v.size()<<"\n";
+//    std::cout<<"doing resize\n";
+//    v.resize(10);
 
-    std::cout<<"resize size "<<v.size()<<"\n";
-  }
-  {
-    std::cout<<"**********************************\n";
-    std::cout<<"scoped std::vector auto\n";
+//    std::cout<<"resize size "<<v.size()<<"\n";
+//  }
+//  {
+//    std::cout<<"**********************************\n";
+//    std::cout<<"scoped std::vector auto\n";
 
-    Mem a(10,'a');
-    Mem b(10,'b');
-    std::cout<<"create v\n";
-    std::vector<Mem>v;
-    std::cout<<"push back\n";
-    v.push_back(a);
-    v.push_back(b);
-  }
-  std::cout<<"end auto scope\n";
-  std::cout<<"**********************************\n";
+//    Mem a(10,'a');
+//    Mem b(10,'b');
+//    std::cout<<"create v\n";
+//    std::vector<Mem>v;
+//    std::cout<<"push back\n";
+//    v.push_back(a);
+//    v.push_back(b);
+//  }
+//  std::cout<<"end auto scope\n";
+//  std::cout<<"**********************************\n";
 
-  {
-    std::cout<<"**********************************\n";
-    std::cout<<"scoped std::vector dynamic\n";
+//  {
+//    std::cout<<"**********************************\n";
+//    std::cout<<"scoped std::vector dynamic\n";
 
-    std::vector<Mem *>v;
-    v.push_back(new Mem(10,'a'));
-    v.push_back(new Mem(10,'b'));
-    //v.clear();
-    v.erase(v.begin(),v.end());
-  }
-  std::cout<<"end dynamic scope\n";
-  std::cout<<"**********************************\n";
+//    std::vector<Mem *>v;
+//    v.push_back(new Mem(10,'a'));
+//    v.push_back(new Mem(10,'b'));
+//    v.clear();
+//    //v.erase(v.begin(),v.end());
+//  }
+//  std::cout<<"end dynamic scope\n";
+//  std::cout<<"**********************************\n";
 
-  {
-    std::cout<<"**********************************\n";
-    std::cout<<"scoped std::vector dynamic with delete\n";
+//  {
+//    std::cout<<"**********************************\n";
+//    std::cout<<"scoped std::vector dynamic with delete\n";
 
-    std::vector<Mem *>v;
-    v.push_back(new Mem(10,'a'));
-    v.push_back(new Mem(10,'b'));
-    for(size_t i=0; i<v.size(); ++i)
-      delete v[i];
-    v.clear();
-  }
-  std::cout<<"end dynamic scope\n";
-  std::cout<<"**********************************\n";
+//    std::vector<Mem *>v;
+//    v.push_back(new Mem(10,'a'));
+//    v.push_back(new Mem(10,'b'));
+//    for(size_t i=0; i<v.size(); ++i)
+//      delete v[i];
+//    v.clear();
+//  }
+//  std::cout<<"end dynamic scope\n";
+//  std::cout<<"**********************************\n";
 
   {
     std::cout<<"**********************************\n";
