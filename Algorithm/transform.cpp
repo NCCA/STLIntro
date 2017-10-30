@@ -1,18 +1,19 @@
 #include <iostream>
 #include <list>
+#include <vector>	
 #include <algorithm>
 
 int main()
 {
 
-	std::list <int> myList;
+	std::vector <int> myList;
 	myList.push_back(2);
 	myList.push_back(4);
 	myList.push_back(5);
 	myList.push_back(6);
 	myList.push_back(2);
 
-	std::list <int> secondList;
+	std::vector <int> secondList;
 	secondList.resize(myList.size());
 
 	std::for_each(std::begin(myList),std::end(myList),[](int n){std::cout<<n<<'\n';});

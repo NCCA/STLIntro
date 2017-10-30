@@ -1,11 +1,11 @@
 #include <iostream>
-#include <map>
+#include <unordered_map>
 #include <string>
 #include <cstdlib>
 
 int main()
 {
-	std::map <std::string,int> MyMap;
+	std::unordered_map <std::string,int> MyMap;
 
 	MyMap["Jon"]=120212442;
 	MyMap["Office"]=123331452;
@@ -19,6 +19,7 @@ int main()
 	std::cout<<MyMap["fred"]<<'\n';
 	std::cout <<MyMap["Jon"]<<'\n';
 	std::cout<<MyMap.size()<<'\n';
-
+	for(auto a : MyMap)
+		std::cout<<a.first<<' '<<a.second<<'\n';
 	return EXIT_SUCCESS;
 }

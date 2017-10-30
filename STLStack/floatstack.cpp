@@ -11,8 +11,8 @@ FloatStack.push(2.0);
 // get the size of the stack
 std::cout <<"Stack Size = "<<FloatStack.size()<<std::endl;
 // print the top value
-std::cout <<"top "<<FloatStack.top()<<std::endl;
+std::cout <<"top "<<FloatStack.top()<<'\n';
 // pop the value from the top of the stack
 FloatStack.pop();
-std::cout <<"top "<<FloatStack.top()<<std::endl;
+std::cout <<"top "<<FloatStack.top()<<'\n';
 }

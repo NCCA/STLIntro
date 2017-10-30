@@ -8,6 +8,7 @@ int main()
 {
 	std::vector <Point3> points;
 
+	points.reserve(10);
 	for (int i=0; i<10; ++i)
 	{
 		points.push_back(Point3(i,i,i));

@@ -22,7 +22,7 @@ int main()
 	std::for_each(std::begin(toSort),std::end(toSort),[](float i){std::cout<<i<<'\n';});
 	std::cout <<"Sorted"<<std::endl;
 	std::for_each(std::begin(toSort),std::end(toSort),[](float i){std::cout<<i<<'\n';});
-	std::cout <<"reverse" <<std::endl;
+	std::cout <<"reverse \n" ;
 	toSort.reverse();
 	std::for_each(std::begin(toSort),std::end(toSort),[](float i){std::cout<<i<<'\n';});
 

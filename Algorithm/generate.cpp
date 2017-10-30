@@ -7,7 +7,7 @@ int main()
 {
 
 	std::vector <int> randomNumbers(10);
-	srand(time(NULL));
+  srand(time(NULL));
 	std::generate(std::begin(randomNumbers),std::end(randomNumbers),std::rand);
 
 	for (auto n : randomNumbers)

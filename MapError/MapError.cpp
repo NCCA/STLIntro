@@ -18,7 +18,7 @@ int main()
 	{
 
 		std::cout<<"size "<<map.size()<<"\n";
-	  auto it=map.find(i);
+		auto it=map.find(i);
 	  if(it !=map.end())
 	  {
 	  	std::cout<<"found value "<<it->second<<"\n";

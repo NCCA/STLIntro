@@ -11,6 +11,8 @@ class Mem
       std::cout<<"ctor "<<m_c<<'\n';
 
     }
+
+//    Mem()=default;
     Mem(): m_mem(nullptr),m_c('d'), m_size(0)
     {
       std::cout<<"default ctor "<<m_c<<'\n';
